@@ -18,8 +18,7 @@ const Landing = () => {
   useEffect(() => {
     if (showModal === false) {
       setModalCounter(modalCounter + 1);
-    } else setModalCounter(modalCounter);
-    // eslint-disable-line
+    }
   }, [showModal]);
 
   return (

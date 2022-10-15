@@ -3,17 +3,19 @@ import React from "react";
 const Modal = (props) => {
   return (
     <section className="modalBackground  flex items-center justify-center bg-gray-500 bg-opacity-70 fixed top-0 bottom-0 right-0 left-0">
-      <div className="modalContainer w-full h-1/2 rounded border-8 border-blue-600 bg-white mx-5 flex  flex-col justify-between items-center ">
-        <div className=" modalText mt-8 mx-3">
+      <div className="modalContainer w-full h-3/4 rounded border-8 border-blue-600 bg-white mx-5 flex  flex-col justify-between items-center ">
+        <div className=" modalText mt-3 mx-3">
+          <p className="text-l font-semibold">{props.data.title}</p>
+          <br />
+
           <p className="text-sm">
-            {" "}
-            {props.data.title} <br />
+            Our Distributed Productivity & Motivational Technology ("DPME")
+            suite operates on a privacy-first framework: <br />
             <br />
             {props.data.agreementPoint} <br />
             <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            .
+            By clicking "I agree", you grant Distributed Productivity &
+            Motivational Technology ("DPME") full access to this information.
           </p>
         </div>
         <div className="buttonContainer w-full h-auto relative bottom-0 flex justify-center">

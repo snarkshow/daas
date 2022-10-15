@@ -11,7 +11,7 @@ const Landing = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setModal(true);
-    }, 900);
+    }, 800);
     return () => clearTimeout(timer);
   });
 
@@ -20,10 +20,6 @@ const Landing = () => {
       setModalCounter(modalCounter + 1);
     }
   }, [showModal]);
-
-  //   if (modalCounter === modalData.length) {
-  //     alert("done");
-  //   }
 
   return (
     <section
@@ -47,10 +43,7 @@ const Landing = () => {
           <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900  to-gray-300 font-bold">
             <span className="text-5xl md:text-9xl">P</span>
 
-            <span className="text-2xl md:text-4xl">
-              {" "}
-              roductivity <span className="text-2xl"> &</span>
-            </span>
+            <span className="text-2xl md:text-4xl"> roductivity &</span>
           </p>
 
           <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-900  to-gray-300 font-bold">
@@ -66,6 +59,8 @@ const Landing = () => {
         </div>
       </section>
       <Products />
+      <section></section>
+
       {showModal && modalCounter < modalData.length && (
         <Modal onClick={() => setModal(false)} data={modalData[modalCounter]} />
       )}

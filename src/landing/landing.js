@@ -18,7 +18,7 @@ const Landing = () => {
   useEffect(() => {
     if (showModal === false) {
       setModalCounter(modalCounter + 1);
-    }
+    } else setModalCounter(modalCounter);
   }, [showModal]);
 
   return (
@@ -32,6 +32,7 @@ const Landing = () => {
         <img
           src="https://i.dailymail.co.uk/1s/2019/04/10/12/12093654-6906845-image-a-13_1554894190186.jpg"
           className="w-full"
+          alt=""
         />
 
         <div className="websiteTitle absolute top-0 left-0 w-1/2 h-full bg-white bg-opacity-80 my-auto flex flex-col justify-center pl-3 md:pl-28">

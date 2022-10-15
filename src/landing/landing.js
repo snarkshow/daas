@@ -11,7 +11,7 @@ const Landing = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setModal(true);
-    }, 1100);
+    }, 900);
     return () => clearTimeout(timer);
   });
 
@@ -20,6 +20,10 @@ const Landing = () => {
       setModalCounter(modalCounter + 1);
     }
   }, [showModal]);
+
+  //   if (modalCounter === modalData.length) {
+  //     alert("done");
+  //   }
 
   return (
     <section
@@ -62,8 +66,29 @@ const Landing = () => {
         </div>
       </section>
       <Products />
-      {showModal && (
+      {showModal && modalCounter < modalData.length && (
         <Modal onClick={() => setModal(false)} data={modalData[modalCounter]} />
+      )}
+      {modalCounter === modalData.length && (
+        <section className="modalBackground  flex items-center justify-center bg-gray-500 bg-opacity-70 fixed top-0 bottom-0 right-0 left-0">
+          <div className="modalContainer w-full h-5/6 rounded border-8 border-blue-600 bg-white mx-5 flex  flex-col justify-between items-center ">
+            <div className=" modalText mt-8 mx-3">
+              <p className="text-xl">
+                text here etc etc
+                <br />
+                <br />
+                Our version of you will soon be able to experience this website,
+                along with all associated features and benefits.
+              </p>
+              <br />
+              <p className="text-4xl">
+                Get ready to join the office of tomorrow,
+                <br />{" "}
+                <span className="text-red-600 font-bold text-5xl"> today</span>
+              </p>
+            </div>
+          </div>
+        </section>
       )}
     </section>
   );

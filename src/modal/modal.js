@@ -2,7 +2,7 @@ import React from "react";
 
 const Modal = (props) => {
   return (
-    <section className="modalBackground w-full h-full flex items-center justify-center bg-gray-500 bg-opacity-70 absolute top-0 ">
+    <section className="modalBackground  flex items-center justify-center bg-gray-500 bg-opacity-70 fixed top-0 bottom-0 right-0 left-0">
       <div className="modalContainer w-full h-1/2 rounded border-8 border-blue-600 bg-white mx-5 flex  flex-col justify-between items-center ">
         <div className=" modalText mt-8 mx-3">
           <p className="text-sm">
@@ -18,7 +18,7 @@ const Modal = (props) => {
         </div>
         <div className="buttonContainer w-full h-auto relative bottom-0 flex justify-center">
           <button
-            className="uppercase bg-blue-600 text-white px-2 py-1 font-bold rounded mb-8"
+            className=" uppercase bg-blue-600 text-white px-2 py-1 font-bold rounded mb-8"
             onClick={() => props.onClick()}
           >
             I agree
